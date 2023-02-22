@@ -145,5 +145,25 @@
 		skillsWayPoint();
 	});
 
+	const form = document.querySelector('#contact-form');
+	const nameInput = document.querySelector('#name');
+	const emailInput = document.querySelector('#email');
+	const messageInput = document.querySelector('#message');
+	const submitButton = document.querySelector('#submit');
+
+	form.addEventListener('submit', (event) => {
+	event.preventDefault();
+
+	const mailtoLink = `mailto:kotharipurva@gmail.com?subject=Contact form submission from ${nameInput.value}&body=Name: ${nameInput.value}%0D%0AEmail: ${emailInput.value}%0D%0AMessage: ${messageInput.value}`;
+
+	window.location.href = mailtoLink;
+
+	// Clear the form after submission
+	nameInput.value = '';
+	emailInput.value = '';
+	messageInput.value = '';
+	});
+
+
 
 }());
