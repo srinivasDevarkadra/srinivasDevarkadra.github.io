@@ -1395,6 +1395,9 @@ pre code {
   .col-md-12 {
     width: 100%;
   }
+  .col-md-13 {
+    width: 40%;
+  }
 
   .col-md-pull-0 {
     right: auto;
